@@ -1,4 +1,4 @@
-# Dinfaches Perzeptron
+# Einfaches Perzeptron
 Dieser Python-Code implementiert ein einfaches Perzeptron, ein grundlegendes Modell eines künstlichen Neurons, das für binäre Klassifikationsaufgaben verwendet wird. Das Perzeptron wird mit einer Schritt-Aktivierungsfunktion trainiert und kann verwendet werden, um logische Operationen wie die AND-Operation zu lernen.
 Klassen und Methoden
 
