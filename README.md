@@ -1,32 +1,32 @@
-# Einfaches Perzeptron
-Dieser Python-Code implementiert ein einfaches Perzeptron, ein grundlegendes Modell eines künstlichen Neurons, das für binäre Klassifikationsaufgaben verwendet wird. Das Perzeptron wird mit einer Schritt-Aktivierungsfunktion trainiert und kann verwendet werden, um logische Operationen wie die AND-Operation zu lernen.
-Klassen und Methoden
+# Simple perceptron
+This Python code implements a simple perceptron, a basic model of an artificial neuron used for binary classification tasks. The perceptron is trained with a step activation function and can be used to learn logical operations such as the AND operation.
+Classes and methods
 
-## 1. Perzeptron-Klasse
+## 1. perceptron class
 
-Die Perzeptron-Klasse enthält die Hauptlogik für das Perzeptron-Modell. Sie umfasst folgende Attribute und Methoden:
+The perceptron class contains the main logic for the perceptron model. It includes the following attributes and methods:
 
-### Attribute:
+### Attributes:
 
-- learning_rate: Die Lernrate, die bestimmt, wie stark die Gewichte bei jeder Aktualisierung angepasst werden.
-- n_iterations: Die Anzahl der Trainingsdurchläufe über die gesamte Datenmenge.
-- weights: Die Gewichte des Perzeptrons, die während des Trainings angepasst werden.
-- bias: Der Bias-Term, der ebenfalls während des Trainings angepasst wird.
+- learning_rate: The learning rate that determines how much the weights are adjusted with each update.
+- n_iterations: The number of training runs over the entire data set.
+- weights: The weights of the perceptron that are adjusted during training.
+- bias: The bias term, which is also adjusted during training.
+- 
+### Methods:
 
-### Methoden:
+- __init__(self, learning_rate=0.1, n_iterations=100): Constructor that initializes the learning rate and the number of iterations.
+- fit(self, X, y): This method trains the perceptron. It initializes the weights and the bias to zero and then performs the training for the specified number of iterations. In each iteration, the weighted sum of the inputs is calculated, the activation function is applied and the weights and bias are updated according to the prediction errors.
+- activation_function(self, x): This method implements the step activation function. It returns 1 if the input value x is greater than or equal to 0, and 0 if it is less.
+- predict(self, X): This method uses the trained weights and bias to make predictions for new input values. It calculates the weighted sum for each input and applies the activation function.
 
-- __init__(self, learning_rate=0.1, n_iterations=100): Konstruktor, der die Lernrate und die Anzahl der Iterationen initialisiert.
-- fit(self, X, y): Diese Methode trainiert das Perzeptron. Sie initialisiert die Gewichte und den Bias auf Null und führt dann für die angegebene Anzahl von Iterationen das Training durch. In jeder Iteration wird die gewichtete Summe der Eingaben berechnet, die Aktivierungsfunktion angewendet und die Gewichte sowie der Bias entsprechend der Vorhersagefehler aktualisiert.
-- activation_function(self, x): Diese Methode implementiert die Schritt-Aktivierungsfunktion. Sie gibt 1 zurück, wenn der Eingabewert x größer oder gleich 0 ist, und 0, wenn er kleiner ist.
-- predict(self, X): Diese Methode verwendet die trainierten Gewichte und den Bias, um Vorhersagen für neue Eingabewerte zu treffen. Sie berechnet die gewichtete Summe für jede Eingabe und wendet die Aktivierungsfunktion an.
+## 2. example use
 
-## 2. Beispielverwendung
+In the main part of the code, an example of the use of the perceptron is given:
 
-Im Hauptteil des Codes wird ein Beispiel für die Verwendung des Perzeptrons gegeben:
+- Input data (X): an array of input values representing the possible combinations of two binary inputs (0 and 1). In this case, the AND operation is used.
+- Target values (y): An array of target values that represents the expected outputs for the AND operation.
+- Perceptron instance: An instance of the perceptron class is created and the model is trained with the input data and target values.
+- Predictions: After training, predictions are made for the input values and the results are output.
 
-- Eingabedaten (X): Ein Array von Eingabewerten, das die möglichen Kombinationen von zwei binären Eingaben (0 und 1) darstellt. In diesem Fall wird die AND-Operation verwendet.
-- Zielwerte (y): Ein Array von Zielwerten, das die erwarteten Ausgaben für die AND-Operation darstellt.
-- Perzeptron-Instanz: Eine Instanz der Perzeptron-Klasse wird erstellt, und das Modell wird mit den Eingabedaten und Zielwerten trainiert.
-- Vorhersagen: Nach dem Training werden Vorhersagen für die Eingabewerte getroffen, und die Ergebnisse werden ausgegeben.
-
-Dieser Code bietet eine einfache Implementierung eines Perzeptrons, das für grundlegende binäre Klassifikationsaufgaben geeignet ist. Er kann leicht erweitert oder modifiziert werden, um komplexere Probleme zu lösen oder andere Aktivierungsfunktionen zu verwenden.
+This code provides a simple implementation of a perceptron suitable for basic binary classification tasks. It can easily be extended or modified to solve more complex problems or to use other activation functions.
